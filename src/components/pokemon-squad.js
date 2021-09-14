@@ -9,6 +9,7 @@ export default function Squad({squadArr, onRemove}) {
   return <Box
     display="flex"
     justifyContent="space-around"
+    minHeight="300px"
   >
     {[...Array(squadLimit)].map((value, i) => <SquadItem
       key={squadArr[i] ? `pokemon_${squadArr[i].pokemon.id}` : i}

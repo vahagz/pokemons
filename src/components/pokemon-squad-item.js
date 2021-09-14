@@ -25,7 +25,6 @@ const colors = {
 export default function SquadItem({pokemon, moves, onRemove}) {
   return (
     <Box
-      height="300px"
       width="10%"
       padding={3}
       bgcolor={pokemon ? colors[pokemon.types[0].name] : ''}
