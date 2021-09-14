@@ -1,0 +1,18 @@
+.move-method {
+  text-transform: uppercase;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.move-method:hover {
+  text-decoration: underline;
+}
+
+.move {
+  cursor: pointer;
+}
+
+.move:hover {
+  text-decoration: underline;
+  background-color: lavender;
+}
