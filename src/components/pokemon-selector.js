@@ -24,14 +24,17 @@ export default function PokemonSelector({ onSelect }) {
   if (!loading && pokemons === null) setPokemons(data?.Pokemons, []);
 
   return (
-    <Box>
+    <Box height="100%">
       <TextField
         fullWidth={true}
         id="outlined-basic"
         label="TYPE TO FILTER"
         variant="outlined"
         inputProps={{
-          className: `border-blue`
+          className: `border-blue`,
+          style: {
+            height: '19px'
+          }
         }}
         onInput={(e) => {
           clearTimeout();

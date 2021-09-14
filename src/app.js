@@ -50,29 +50,37 @@ export default function App() {
 
   return (
     <ClientContext.Provider value={client}>
-      <>
-        <Box>
-          <Grid container spacing={3} className={`${mainStyles.container} ${mainStyles.bordered}`}>
-            <Grid item xs={12}>
-              <Box textAlign="center">
-                <Logo />
-              </Box>
-            </Grid>
-            <Grid item xs={2}>
+      <Box>
+        <Grid container spacing={3} className={`${mainStyles.container} ${mainStyles.top}`}>
+          <Grid item xs={12} style={{height: '20%'}}>
+            <Box textAlign="center">
+              <Logo />
+            </Box>
+          </Grid>
+          <Grid container spacing={3} className={`${mainStyles.container}`} style={{height: '80%'}}>
+            <Grid item xs={2} style={{height: '100%'}}>
               {PokemonSelectorMemoized}
             </Grid>
-            <Grid item xs={10}>
+            <Grid item xs={10} style={{height: '100%'}}>
               {PokemonPreviewMemoized}
             </Grid>
           </Grid>
-          <Box padding={2}>
-            <Box textAlign="center" className={`text-yellow`}>SELECTED SQUAD</Box>
-            <Box marginTop={2}>
-              <PokemonSquad squadArr={squad} onRemove={removeFromSquad} />
-            </Box>
+        </Grid>
+        <Box padding={2} className={`${mainStyles.bottom}`}>
+          <Box
+            textAlign="center"
+            className={`text-yellow`}
+          >
+            SELECTED SQUAD
+          </Box>
+          <Box
+            marginTop={2} 
+            height="calc(100% - 20px)"
+          >
+            <PokemonSquad squadArr={squad} onRemove={removeFromSquad} />
           </Box>
         </Box>
-      </>
+      </Box>
     </ClientContext.Provider>
   );
 }

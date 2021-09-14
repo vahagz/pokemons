@@ -25,8 +25,10 @@ const colors = {
 export default function SquadItem({pokemon, moves, onRemove}) {
   return (
     <Box
-      width="10%"
-      padding={3}
+      width="14%"
+      maxWidth="170px"
+      padding={2}
+      margin={1}
       bgcolor={pokemon ? colors[pokemon.types[0].name] : ''}
       className={pokemon ? '' : 'bg-grey'}
       style={pokemon ? {

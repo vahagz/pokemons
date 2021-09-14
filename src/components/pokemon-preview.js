@@ -109,7 +109,7 @@ function PreviewWrapper({ pokemon, selectedMoves, onSelectMove, onRemoveMove, on
 
   return (
     <Grid container spacing={3} className={styles.container}>
-      <Grid item xs={3}>
+      <Grid item xs={3} style={{height: '100%'}}>
         <Box>
           <img width="100%" src={pokemon.image} alt="Pokemon" />
         </Box>
@@ -126,7 +126,7 @@ function PreviewWrapper({ pokemon, selectedMoves, onSelectMove, onRemoveMove, on
           </Button>
         </Box>
       </Grid>
-      <Grid item xs={6}>
+      <Grid item xs={6} style={{height: '100%'}}>
         <Box
           height="100%"
           display="flex"
@@ -143,8 +143,8 @@ function PreviewWrapper({ pokemon, selectedMoves, onSelectMove, onRemoveMove, on
           </Box>
         </Box>
       </Grid>
-      <Grid item xs={3}>
-        <Box>
+      <Grid item xs={3} style={{height: '100%'}}>
+        <Box height="100%">
           {MovesListMemoized}
         </Box>
       </Grid>

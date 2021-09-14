@@ -10,7 +10,7 @@ export default function MovesList({moveMethod, moveMethods, moves, onSelectMetho
     [moves, onSelectMove]
   );
   return (
-    <Box>
+    <Box height="100%">
       <Box
         style={{
           display: 'flex',
@@ -37,7 +37,7 @@ export default function MovesList({moveMethod, moveMethods, moves, onSelectMetho
       </Box>
       <Box
         marginTop={1}
-        height="350px"
+        height="100%"
         style={{
           overflowY: 'auto'
         }}
